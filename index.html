@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayra Gemglitz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HERO BANNER -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>✨ Ayra Gemglitz ✨</h1>
+            <p>Handmade Earrings, Chains & Bracelets</p>
+            <a href="#earrings" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- TOP BUTTONS -->
+    <div class="top-buttons">
+        <a href="https://wa.me/917200955361?text=Hello%20Ayra%20Gemglitz!%20I%20want%20to%20order%20this%20product." class="btn">WhatsApp Order</a>
+        <a href="https://instagram.com/ayragemglitz" class="btn outline">Instagram</a>
+    </div>
+
+    <!-- STICKY CATEGORY MENU -->
+    <nav class="category-menu">
+        <a href="#earrings">Earrings</a>
+        <a href="#chains">Chains</a>
+        <a href="#bracelets">Bracelets</a>
+    </nav>
+
+    <!-- FEATURED PRODUCTS SLIDER -->
+    <section class="featured">
+        <h2>Featured Products</h2>
+        <div class="slider-container">
+            <div class="slider-track">
+                <!-- EARRINGS -->
+                <div class="slide"><img src="images/earring1.jpg" alt="Pearl Drop Earrings"></div>
+                <div class="slide"><img src="images/earring2.jpg" alt="Floral Handmade Earrings"></div>
+                <!-- CHAINS -->
+                <div class="slide"><img src="images/chain1.jpg" alt="Minimal Gold Chain"></div>
+                <!-- BRACELETS -->
+                <div class="slide"><img src="images/bracelet1.jpg" alt="Beaded Handmade Bracelet"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EARRINGS -->
+    <section class="products" id="earrings">
+        <h2>Earrings</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="images/earring1.jpg" alt="Pearl Drop Earrings">
+                <h3>Pearl Drop Earrings</h3>
+                <p class="price">₹499</p>
+                <a href="https://wa.me/917200955361?text=Hello%20Ayra%20Gemglitz!%20I%20want%20to%20order%20this%20product." class="btn">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="images/earring2.jpg" alt="Floral Handmade Earrings">
+                <h3>Floral Handmade Earrings</h3>
+                <p class="price">₹549</p>
+                <a href="https://wa.me/917200955361?text=Hello%20Ayra%20Gemglitz!%20I%20want%20to%20order%20this%20product." class="btn">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAINS -->
+    <section class="products alt" id="chains">
+        <h2>Chains</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="images/chain1.jpg" alt="Minimal Gold Chain">
+                <h3>Minimal Gold Chain</h3>
+                <p class="price">₹699</p>
+                <a href="https://wa.me/917200955361?text=Hello%20Ayra%20Gemglitz!%20I%20want%20to%20order%20this%20product." class="btn">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRACELETS -->
+    <section class="products" id="bracelets">
+        <h2>Bracelets</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="images/bracelet1.jpg" alt="Beaded Handmade Bracelet">
+                <h3>Beaded Handmade Bracelet</h3>
+                <p class="price">₹399</p>
+                <a href="https://wa.me/917200955361?text=Hello%20Ayra%20Gemglitz!%20I%20want%20to%20order%20this%20product." class="btn">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAYMENT -->
+    <section class="payment">
+        <h2>Payment Options</h2>
+        <p>UPI Accepted</p>
+        <img src="images/upi-qr.png" class="upi" alt="UPI QR Code">
+        <p>Google Pay • PhonePe • Paytm</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <h2>About Ayra Gemglitz</h2>
+        <p>
+            Ayra Gemglitz is a handmade jewellery brand offering elegant earrings,
+            chains, and bracelets for college girls, working women, and jewellery lovers
+            of all ages. Each piece is crafted with care, love, and attention to detail.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Ayra Gemglitz | Handmade with love 💖</p>
+    </footer>
+
+    <!-- AUTO-SLIDER SCRIPT -->
+    <script>
+        const track = document.querySelector('.slider-track');
+        const slides = Array.from(track.children);
+        let currentIndex = 0;
+        const slideCount = slides.length;
+
+        function showNextSlide() {
+            currentIndex = (currentIndex + 1) % slideCount;
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        // Auto slide every 2 seconds
+        setInterval(showNextSlide, 2000);
+    </script>
+
+</body>
+</html>
